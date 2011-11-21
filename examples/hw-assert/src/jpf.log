@@ -1,0 +1,69 @@
+JavaPathfinder v6.0 (rev 611) - (C) RIACS/NASA Ames Research Center
+
+====================================================== system under test
+application: HelloWorld.java
+
+====================================================== search started: 11/21/11 8:04 PM
+
+====================================================== error #1
+gov.nasa.jpf.jvm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at HelloWorld.main(HelloWorld.java:25)
+
+====================================================== trace #1
+------------------------------------------------------ transition #0 thread: 0
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="<root>",isCascaded:false,{>main}]
+  HelloWorld.java:1              : public class HelloWorld extends Thread {
+  HelloWorld.java:15             : StringBuffer buf = new StringBuffer();
+  HelloWorld.java:16             : HelloWorld hw1 = new HelloWorld(buf, "Hello, ");
+  HelloWorld.java:5              : HelloWorld(StringBuffer buf, String data) {
+  HelloWorld.java:6              : this.buf = buf;
+  HelloWorld.java:7              : this.data = data;
+  HelloWorld.java:8              : }
+  HelloWorld.java:16             : HelloWorld hw1 = new HelloWorld(buf, "Hello, ");
+  HelloWorld.java:17             : HelloWorld hw2 = new HelloWorld(buf, "World!");
+  HelloWorld.java:5              : HelloWorld(StringBuffer buf, String data) {
+  HelloWorld.java:6              : this.buf = buf;
+  HelloWorld.java:7              : this.data = data;
+  HelloWorld.java:8              : }
+  HelloWorld.java:17             : HelloWorld hw2 = new HelloWorld(buf, "World!");
+  HelloWorld.java:18             : hw1.start();
+------------------------------------------------------ transition #1 thread: 0
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1}]
+  HelloWorld.java:19             : hw2.start();
+------------------------------------------------------ transition #2 thread: 0
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2}]
+  HelloWorld.java:21             : hw1.join();
+------------------------------------------------------ transition #3 thread: 2
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="wait",isCascaded:false,{Thread-1,>Thread-2}]
+  HelloWorld.java:11             : buf.append(data);
+  HelloWorld.java:12             : }
+------------------------------------------------------ transition #4 thread: 1
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{>Thread-1}]
+  HelloWorld.java:11             : buf.append(data);
+  HelloWorld.java:12             : }
+------------------------------------------------------ transition #5 thread: 0
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{>main}]
+  HelloWorld.java:22             : hw2.join();
+  HelloWorld.java:24             : }
+  HelloWorld.java:25             : assert (buf.toString().equals("Hello, World!"));
+
+====================================================== snapshot #1
+thread id=0,name=main,status=RUNNING,priority=5,lockCount=0,suspendCount=0
+  call stack:
+	at HelloWorld.main(HelloWorld.java:25)
+
+====================================================== results
+error #1: gov.nasa.jpf.jvm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at HelloWorld.main(Hello..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=17, visited=4, backtracked=15, end=2
+search:             maxDepth=8, constraints hit=0
+choice generators:  thread=16 (signal=0, lock=2, shared ref=2), data=0
+heap:               new=379, released=48, max live=339, gc-cycles=19
+instructions:       3643
+max memory:         59MB
+loaded code:        classes=79, methods=1406
+
+====================================================== search finished: 11/21/11 8:04 PM
