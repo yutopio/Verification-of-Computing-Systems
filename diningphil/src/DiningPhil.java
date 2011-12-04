@@ -31,6 +31,7 @@ public class DiningPhil {
     Fork right;
 
     static Semaphore sem = new Semaphore(DiningPhil.N - 1, true);
+    public static int count;
 
     public Philosopher(Fork left, Fork right) {
       this.left = left;
@@ -44,6 +45,9 @@ public class DiningPhil {
         while (!sem.tryAcquire()) ;
         synchronized (right) {
           // eat!
+          synchronized (sem) {
+            count++;
+          }
         }
         sem.release();
       }
@@ -53,13 +57,23 @@ public class DiningPhil {
   
   public static final int N = 5;
 
-  public static void main(String[] args) {
+  public static void main(String[] args)
+    throws InterruptedException {
     Fork[] forks = new Fork[N];
     for (int i = 0; i < N; i++) {
       forks[i] = new Fork();
     }
+
+    Philosopher[] phils = new Philosopher[N];
+    Philosopher.count = 0;
     for (int i = 0; i < N; i++) {
-      new Philosopher(forks[i], forks[(i + 1) % N]);
+      phils[i] = new Philosopher(forks[i], forks[(i + 1) % N]);
     }
+
+    // Make sure everyone finished their meals.
+    for (int i = 0; i < N; i++) {
+      phils[i].join();
+    }
+    assert Philosopher.count == N;
   }
 }

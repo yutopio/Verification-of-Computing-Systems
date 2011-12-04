@@ -3,19 +3,19 @@ JavaPathfinder v6.0 (rev 611) - (C) RIACS/NASA Ames Research Center
 ====================================================== system under test
 application: DiningPhil.java
 
-====================================================== search started: 12/5/11 5:22 AM
+====================================================== search started: 12/5/11 5:39 AM
 
 ====================================================== results
 no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:40
-states:             new=85170, visited=268207, backtracked=353376, end=153
-search:             maxDepth=41, constraints hit=0
-choice generators:  thread=85169 (signal=0, lock=17266, shared ref=47334), data=0
-heap:               new=58722, released=470604, max live=400, gc-cycles=296990
-instructions:       9824854
-max memory:         168MB
-loaded code:        classes=88, methods=1440
+elapsed time:       00:01:18
+states:             new=162848, visited=513680, backtracked=676527, end=14
+search:             maxDepth=56, constraints hit=0
+choice generators:  thread=162847 (signal=0, lock=37374, shared ref=93302), data=0
+heap:               new=105648, released=28018, max live=405, gc-cycles=543619
+instructions:       17150435
+max memory:         293MB
+loaded code:        classes=89, methods=1441
 
-====================================================== search finished: 12/5/11 5:23 AM
+====================================================== search finished: 12/5/11 5:40 AM
