@@ -18,6 +18,8 @@
 // DOCUMENTATION, IF PROVIDED, WILL CONFORM TO THE SUBJECT SOFTWARE.
 //
 
+import java.util.concurrent.Semaphore;
+
 public class DiningPhil {
 
   static class Fork {
@@ -28,6 +30,8 @@ public class DiningPhil {
     Fork left;
     Fork right;
 
+    static Semaphore sem = new Semaphore(DiningPhil.N - 1, true);
+
     public Philosopher(Fork left, Fork right) {
       this.left = left;
       this.right = right;
@@ -35,16 +39,19 @@ public class DiningPhil {
     }
 
     public void run() {
-      // think!
+      while (!sem.tryAcquire()) ;
       synchronized (left) {
+        while (!sem.tryAcquire()) ;
         synchronized (right) {
           // eat!
         }
+        sem.release();
       }
+      sem.release();
     }
   }
   
-  static final int N = 5;
+  public static final int N = 5;
 
   public static void main(String[] args) {
     Fork[] forks = new Fork[N];
