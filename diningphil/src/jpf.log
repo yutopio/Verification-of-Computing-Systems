@@ -3,7 +3,7 @@ JavaPathfinder v6.0 (rev 611) - (C) RIACS/NASA Ames Research Center
 ====================================================== system under test
 application: DiningPhil.java
 
-====================================================== search started: 12/5/11 12:01 AM
+====================================================== search started: 12/5/11 8:28 AM
 
 ====================================================== error #1
 gov.nasa.jpf.jvm.NotDeadlockedProperty
@@ -13,141 +13,151 @@ deadlock encountered:
   thread id=3,name=Thread-3,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   thread id=4,name=Thread-4,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   thread id=5,name=Thread-5,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
-  thread id=6,name=Thread-6,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
 
 ====================================================== trace #1
 ------------------------------------------------------ transition #0 thread: 0
 gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="<root>",isCascaded:false,{>main}]
-  DiningPhil.java:49             : public static void main(String[] args) {
+  DiningPhil.java:50             : Fork[] forks = new Fork[N];
+  DiningPhil.java:51             : for (int i = 0; i < N; i++) {
   DiningPhil.java:52             : forks[i] = new Fork();
-  DiningPhil.java:57             : }
-  DiningPhil.java:58             : }
-  DiningPhil.java:25             : 
-  DiningPhil.java:58             : }
-  DiningPhil.java:25             : 
-  DiningPhil.java:58             : }
-  DiningPhil.java:25             : 
-  DiningPhil.java:58             : }
-  DiningPhil.java:25             : 
-  DiningPhil.java:58             : }
-  DiningPhil.java:25             : 
-  DiningPhil.java:58             : }
-  DiningPhil.java:25             : 
-  DiningPhil.java:58             : }
+  DiningPhil.java:23             : static class Fork {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:51             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:23             : static class Fork {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:51             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:23             : static class Fork {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:51             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:23             : static class Fork {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:51             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:23             : static class Fork {
+  DiningPhil.java:52             : forks[i] = new Fork();
+  DiningPhil.java:51             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:31             : public Philosopher(Fork left, Fork right) {
+  DiningPhil.java:32             : this.left = left;
   DiningPhil.java:33             : this.right = right;
   DiningPhil.java:34             : start();
-  DiningPhil.java:35             : }
-  DiningPhil.java:37             : public void run() {
 ------------------------------------------------------ transition #1 thread: 0
 gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1}]
+  DiningPhil.java:35             : }
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:54             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:31             : public Philosopher(Fork left, Fork right) {
+  DiningPhil.java:32             : this.left = left;
   DiningPhil.java:33             : this.right = right;
   DiningPhil.java:34             : start();
-  DiningPhil.java:35             : }
-  DiningPhil.java:37             : public void run() {
 ------------------------------------------------------ transition #2 thread: 0
 gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2}]
+  DiningPhil.java:35             : }
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:54             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:31             : public Philosopher(Fork left, Fork right) {
+  DiningPhil.java:32             : this.left = left;
   DiningPhil.java:33             : this.right = right;
   DiningPhil.java:34             : start();
-  DiningPhil.java:35             : }
-  DiningPhil.java:37             : public void run() {
 ------------------------------------------------------ transition #3 thread: 0
 gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3}]
-  DiningPhil.java:33             : this.right = right;
+  DiningPhil.java:35             : }
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:54             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:31             : public Philosopher(Fork left, Fork right) {
 ------------------------------------------------------ transition #4 thread: 0
 gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3}]
+  DiningPhil.java:32             : this.left = left;
+  DiningPhil.java:33             : this.right = right;
   DiningPhil.java:34             : start();
-  DiningPhil.java:35             : }
-  DiningPhil.java:37             : public void run() {
 ------------------------------------------------------ transition #5 thread: 0
 gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3,Thread-4}]
+  DiningPhil.java:35             : }
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:54             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:31             : public Philosopher(Fork left, Fork right) {
+  DiningPhil.java:32             : this.left = left;
   DiningPhil.java:33             : this.right = right;
   DiningPhil.java:34             : start();
+------------------------------------------------------ transition #6 thread: 1
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{main,>Thread-1,Thread-2,Thread-3,Thread-4,Thread-5}]
+  DiningPhil.java:39             : synchronized (left) {
+------------------------------------------------------ transition #7 thread: 0
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3,Thread-4,Thread-5}]
   DiningPhil.java:35             : }
-  DiningPhil.java:37             : public void run() {
------------------------------------------------------- transition #6 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3,Thread-4,Thread-5}]
-  DiningPhil.java:33             : this.right = right;
-  DiningPhil.java:34             : start();
-  DiningPhil.java:35             : }
-  DiningPhil.java:37             : public void run() {
------------------------------------------------------- transition #7 thread: 1
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{main,>Thread-1,Thread-2,Thread-3,Thread-4,Thread-5,Thread-6}]
-  DiningPhil.java:41             : // eat!
------------------------------------------------------- transition #8 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3,Thread-4,Thread-5,Thread-6}]
------------------------------------------------------- transition #9 thread: 6
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{Thread-1,Thread-2,Thread-3,Thread-4,Thread-5,>Thread-6}]
-  DiningPhil.java:41             : // eat!
-  DiningPhil.java:42             : }
------------------------------------------------------- transition #10 thread: 5
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,Thread-2,Thread-3,Thread-4,>Thread-5,Thread-6}]
-  DiningPhil.java:41             : // eat!
-  DiningPhil.java:42             : }
------------------------------------------------------- transition #11 thread: 4
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,Thread-2,Thread-3,>Thread-4,Thread-6}]
-  DiningPhil.java:41             : // eat!
-  DiningPhil.java:42             : }
------------------------------------------------------- transition #12 thread: 3
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,Thread-2,>Thread-3,Thread-6}]
-  DiningPhil.java:41             : // eat!
-  DiningPhil.java:42             : }
------------------------------------------------------- transition #13 thread: 2
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,>Thread-2,Thread-6}]
-  DiningPhil.java:41             : // eat!
-  DiningPhil.java:42             : }
------------------------------------------------------- transition #14 thread: 1
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>Thread-1,Thread-6}]
-  DiningPhil.java:41             : // eat!
-  DiningPhil.java:42             : }
+  DiningPhil.java:55             : new Philosopher(forks[i], forks[(i + 1) % N]);
+  DiningPhil.java:54             : for (int i = 0; i < N; i++) {
+  DiningPhil.java:57             : }
+------------------------------------------------------ transition #8 thread: 5
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{Thread-1,Thread-2,Thread-3,Thread-4,>Thread-5}]
+  DiningPhil.java:39             : synchronized (left) {
+  DiningPhil.java:40             : synchronized (right) {
+------------------------------------------------------ transition #9 thread: 4
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,Thread-2,Thread-3,>Thread-4,Thread-5}]
+  DiningPhil.java:39             : synchronized (left) {
+  DiningPhil.java:40             : synchronized (right) {
+------------------------------------------------------ transition #10 thread: 3
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,Thread-2,>Thread-3,Thread-5}]
+  DiningPhil.java:39             : synchronized (left) {
+  DiningPhil.java:40             : synchronized (right) {
+------------------------------------------------------ transition #11 thread: 2
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-1,>Thread-2,Thread-5}]
+  DiningPhil.java:39             : synchronized (left) {
+  DiningPhil.java:40             : synchronized (right) {
+------------------------------------------------------ transition #12 thread: 1
+gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>Thread-1,Thread-5}]
+  DiningPhil.java:39             : synchronized (left) {
+  DiningPhil.java:40             : synchronized (right) {
 
 ====================================================== snapshot #1
 thread id=1,name=Thread-1,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   owned locks:DiningPhil$Fork@136
   blocked on: DiningPhil$Fork@137
   call stack:
-	at DiningPhil$Philosopher.run(DiningPhil.java:42)
+	at DiningPhil$Philosopher.run(DiningPhil.java:40)
 
 thread id=2,name=Thread-2,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   owned locks:DiningPhil$Fork@137
   blocked on: DiningPhil$Fork@138
   call stack:
-	at DiningPhil$Philosopher.run(DiningPhil.java:42)
+	at DiningPhil$Philosopher.run(DiningPhil.java:40)
 
 thread id=3,name=Thread-3,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   owned locks:DiningPhil$Fork@138
   blocked on: DiningPhil$Fork@139
   call stack:
-	at DiningPhil$Philosopher.run(DiningPhil.java:42)
+	at DiningPhil$Philosopher.run(DiningPhil.java:40)
 
 thread id=4,name=Thread-4,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   owned locks:DiningPhil$Fork@139
   blocked on: DiningPhil$Fork@13a
   call stack:
-	at DiningPhil$Philosopher.run(DiningPhil.java:42)
+	at DiningPhil$Philosopher.run(DiningPhil.java:40)
 
 thread id=5,name=Thread-5,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
   owned locks:DiningPhil$Fork@13a
-  blocked on: DiningPhil$Fork@13b
-  call stack:
-	at DiningPhil$Philosopher.run(DiningPhil.java:42)
-
-thread id=6,name=Thread-6,status=BLOCKED,priority=5,lockCount=0,suspendCount=0
-  owned locks:DiningPhil$Fork@13b
   blocked on: DiningPhil$Fork@136
   call stack:
-	at DiningPhil$Philosopher.run(DiningPhil.java:42)
+	at DiningPhil$Philosopher.run(DiningPhil.java:40)
 
 ====================================================== results
 error #1: gov.nasa.jpf.jvm.NotDeadlockedProperty "deadlock encountered:   thread id=1,name=Thread-1,..."
 
 ====================================================== statistics
 elapsed time:       00:00:00
-states:             new=208, visited=381, backtracked=574, end=13
-search:             maxDepth=19, constraints hit=0
-choice generators:  thread=207 (signal=0, lock=49, shared ref=0), data=0
-heap:               new=379, released=2655, max live=366, gc-cycles=589
-instructions:       13636
+states:             new=101, visited=136, backtracked=224, end=11
+search:             maxDepth=16, constraints hit=0
+choice generators:  thread=100 (signal=0, lock=25, shared ref=0), data=0
+heap:               new=372, released=1065, max live=361, gc-cycles=237
+instructions:       7586
 max memory:         59MB
-loaded code:        classes=79, methods=1304
+loaded code:        classes=79, methods=1303
 
-====================================================== search finished: 12/5/11 12:01 AM
+====================================================== search finished: 12/5/11 8:28 AM
