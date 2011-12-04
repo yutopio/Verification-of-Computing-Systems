@@ -30,7 +30,7 @@ public class DiningPhil {
     Fork left;
     Fork right;
 
-    static Semaphore sem = new Semaphore(DiningPhil.N - 1, true);
+    static Semaphore sem;
     public static int count;
 
     public Philosopher(Fork left, Fork right) {
@@ -55,7 +55,7 @@ public class DiningPhil {
     }
   }
   
-  public static final int N = 5;
+  static final int N = 5;
 
   public static void main(String[] args)
     throws InterruptedException {
@@ -65,6 +65,7 @@ public class DiningPhil {
     }
 
     Philosopher[] phils = new Philosopher[N];
+    Philosopher.sem  = new Semaphore(N - 1, true);
     Philosopher.count = 0;
     for (int i = 0; i < N; i++) {
       phils[i] = new Philosopher(forks[i], forks[(i + 1) % N]);
