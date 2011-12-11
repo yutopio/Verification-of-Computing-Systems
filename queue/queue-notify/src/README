@@ -1,0 +1,15 @@
+=== EXERCISE: Queue ===
+
+This is the incorrect version with notify (instead of notifyAll).
+
+Please run
+
+jpf +vm.sourcepath=. ProdCons
+
+to get the error trace for the exercise.
+
+The other test case, run with
+
+jpf +vm.sourcepath=. QueueTest
+
+is a weaker test suite that does not produce an error.
