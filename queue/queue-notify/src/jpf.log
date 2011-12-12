@@ -1,9 +1,9 @@
 JavaPathfinder v6.0 (rev 611) - (C) RIACS/NASA Ames Research Center
 
 ====================================================== system under test
-application: ProdCons.java
+application: QueueTest.java
 
-====================================================== search started: 12/12/11 10:50 AM
+====================================================== search started: 12/12/11 5:23 PM
 0, 16
 1, 17
 0, 16
@@ -17,166 +17,34 @@ application: ProdCons.java
 0, 16
 1, 17
 0, 16
-
-====================================================== error #1
-gov.nasa.jpf.jvm.NotDeadlockedProperty
-deadlock encountered:
-  thread id=3,name=Thread-3,status=WAITING,priority=5,lockCount=1,suspendCount=0
-  thread id=4,name=Thread-4,status=WAITING,priority=5,lockCount=1,suspendCount=0
-
-====================================================== trace #1
------------------------------------------------------- transition #0 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="<root>",isCascaded:false,{>main}]
-  ProdCons.java:33               : q = new Queue(Q_SIZE);
-  Queue.java:2                   : public class Queue {
-  ProdCons.java:33               : q = new Queue(Q_SIZE);
-  Queue.java:8                   : public Queue(int size) {
-  Queue.java:9                   : assert (size <= Integer.MAX_VALUE / 2);
-  Queue.java:10                  : data = new byte[size];
-  Queue.java:11                  : this.size = size;
-  Queue.java:12                  : p = 0;
-  Queue.java:13                  : c = 0;
-  Queue.java:14                  : }
-  ProdCons.java:33               : q = new Queue(Q_SIZE);
-  ProdCons.java:34               : for (int i = 0; i < N; i++) {
-  ProdCons.java:35               : new Producer(i).start();
-  ProdCons.java:13               : Producer(int i) {
-  ProdCons.java:14               : data = new byte[]{(byte)i, (byte)(i + DELTA)};
-  ProdCons.java:15               : }
-  ProdCons.java:35               : new Producer(i).start();
------------------------------------------------------- transition #1 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1}]
-  ProdCons.java:36               : new Consumer().start();
------------------------------------------------------- transition #2 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>main,Thread-1}]
-  ProdCons.java:22               : static class Consumer extends Thread {
-  ProdCons.java:36               : new Consumer().start();
-  ProdCons.java:22               : static class Consumer extends Thread {
-  ProdCons.java:36               : new Consumer().start();
------------------------------------------------------- transition #3 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2}]
-  ProdCons.java:34               : for (int i = 0; i < N; i++) {
-  ProdCons.java:35               : new Producer(i).start();
-  ProdCons.java:13               : Producer(int i) {
-  ProdCons.java:14               : data = new byte[]{(byte)i, (byte)(i + DELTA)};
-  ProdCons.java:15               : }
-  ProdCons.java:35               : new Producer(i).start();
------------------------------------------------------- transition #4 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3}]
-  ProdCons.java:36               : new Consumer().start();
-  ProdCons.java:22               : static class Consumer extends Thread {
------------------------------------------------------- transition #5 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3}]
-  ProdCons.java:22               : static class Consumer extends Thread {
-  ProdCons.java:36               : new Consumer().start();
------------------------------------------------------- transition #6 thread: 0
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="start",isCascaded:false,{>main,Thread-1,Thread-2,Thread-3,Thread-4}]
-  ProdCons.java:34               : for (int i = 0; i < N; i++) {
-  ProdCons.java:38               : }
------------------------------------------------------- transition #7 thread: 2
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{Thread-1,>Thread-2,Thread-3,Thread-4}]
-  ProdCons.java:24               : byte[] result = new byte[2];
-  ProdCons.java:25               : q.remove(result);
-  Queue.java:54                  : int len = storage.length;
-  Queue.java:55                  : waitForData(len);
-  Queue.java:39                  : assert (len <= size);
-  Queue.java:40                  : while (c + len > p) {
-  Queue.java:42                  : wait();
------------------------------------------------------- transition #8 thread: 4
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="wait",isCascaded:false,{Thread-1,Thread-3,>Thread-4}]
-  ProdCons.java:24               : byte[] result = new byte[2];
-  ProdCons.java:25               : q.remove(result);
-  Queue.java:54                  : int len = storage.length;
-  Queue.java:55                  : waitForData(len);
-  Queue.java:39                  : assert (len <= size);
-  Queue.java:40                  : while (c + len > p) {
-  Queue.java:42                  : wait();
------------------------------------------------------- transition #9 thread: 1
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="wait",isCascaded:false,{>Thread-1,Thread-3}]
-  ProdCons.java:18               : q.put(data);
-  Queue.java:18                  : int len = items.length;
-  Queue.java:19                  : assert (len <= size);
-  Queue.java:21                  : while (p + len > c + size) {
-  Queue.java:28                  : "p + len <= c + size failed: p = " + p + ", c = " + ", len = " + len;
-  Queue.java:29                  : for (int i = 0; i < len; i++) {
-  Queue.java:30                  : data[p++ % size] = items[i];
-  Queue.java:29                  : for (int i = 0; i < len; i++) {
-  Queue.java:30                  : data[p++ % size] = items[i];
-  Queue.java:29                  : for (int i = 0; i < len; i++) {
-  Queue.java:33                  : "p <= c + size failed: p = " + p + ", c = " + c;
-  Queue.java:34                  : notify(); // wake up waiting consumers
------------------------------------------------------- transition #10 thread: 1
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="notify",isCascaded:false,{>Thread-2,Thread-4}]
-  Queue.java:35                  : }
-  ProdCons.java:19               : }
------------------------------------------------------- transition #11 thread: 3
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{Thread-2,>Thread-3}]
------------------------------------------------------- transition #12 thread: 3
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="sharedField",isCascaded:false,{Thread-2,>Thread-3}]
-  ProdCons.java:18               : q.put(data);
------------------------------------------------------- transition #13 thread: 3
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="monitorEnter",isCascaded:false,{Thread-2,>Thread-3}]
-  ProdCons.java:18               : q.put(data);
-  Queue.java:18                  : int len = items.length;
-  Queue.java:19                  : assert (len <= size);
-  Queue.java:21                  : while (p + len > c + size) {
-  Queue.java:23                  : wait();
------------------------------------------------------- transition #14 thread: 2
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="wait",isCascaded:false,{>Thread-2}]
-  Queue.java:44                  : }
-  Queue.java:40                  : while (c + len > p) {
-  Queue.java:47                  : "p >= c + len failed: p = " + p + ", c = " + c + ", len = " + len;
-  Queue.java:49                  : "p - size <= c failed: p = " + p + ", c = " + c;
-  Queue.java:50                  : }
-  Queue.java:56                  : for (int i = 0; i < len; i++) {
-  Queue.java:57                  : storage[i] = data[c++ % size];
-  Queue.java:56                  : for (int i = 0; i < len; i++) {
-  Queue.java:57                  : storage[i] = data[c++ % size];
-  Queue.java:56                  : for (int i = 0; i < len; i++) {
-  Queue.java:60                  : if (c >= size) {
-  Queue.java:61                  : assert (p >=c);
-  Queue.java:62                  : p -= size;
-  Queue.java:63                  : c -= size;
-  Queue.java:65                  : notify(); // wake up waiting producers
------------------------------------------------------- transition #15 thread: 2
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="notify",isCascaded:false,{Thread-3,>Thread-4}]
-  Queue.java:66                  : }
-  ProdCons.java:26               : System.out.println(result[0] + ", " + result[1]);
-  ProdCons.java:27               : assert (result[1] - result[0] == DELTA);
-  ProdCons.java:28               : }
------------------------------------------------------- transition #16 thread: 4
-gov.nasa.jpf.jvm.choice.ThreadChoiceFromSet[id="terminate",isCascaded:false,{>Thread-4}]
-  Queue.java:44                  : }
-  Queue.java:40                  : while (c + len > p) {
-  Queue.java:42                  : wait();
-
-====================================================== snapshot #1
-thread id=3,name=Thread-3,status=WAITING,priority=5,lockCount=1,suspendCount=0
-  waiting on: Queue@132
-  call stack:
-	at java.lang.Object.wait(Object.java:-1)
-	at Queue.put(Queue.java:23)
-	at ProdCons$Producer.run(ProdCons.java:18)
-
-thread id=4,name=Thread-4,status=WAITING,priority=5,lockCount=1,suspendCount=0
-  waiting on: Queue@132
-  call stack:
-	at java.lang.Object.wait(Object.java:-1)
-	at Queue.waitForData(Queue.java:42)
-	at Queue.remove(Queue.java:55)
-	at ProdCons$Consumer.run(ProdCons.java:25)
+1, 17
+0, 16
+1, 17
+0, 16
+1, 17
+0, 16
+1, 17
+0, 16
+1, 17
+0, 16
+1, 17
+0, 16
+1, 17
+0, 16
+1, 17
+0, 16
 
 ====================================================== results
-error #1: gov.nasa.jpf.jvm.NotDeadlockedProperty "deadlock encountered:   thread id=3,name=Thread-3,..."
+no errors detected
 
 ====================================================== statistics
-elapsed time:       00:00:00
-states:             new=124, visited=100, backtracked=207, end=14
-search:             maxDepth=17, constraints hit=0
-choice generators:  thread=122 (signal=26, lock=24, shared ref=19), data=0
-heap:               new=713, released=870, max live=356, gc-cycles=210
-instructions:       19587
-max memory:         59MB
-loaded code:        classes=79, methods=1310
+elapsed time:       00:00:01
+states:             new=1187, visited=1231, backtracked=2417, end=106
+search:             maxDepth=106, constraints hit=0
+choice generators:  thread=1186 (signal=8, lock=131, shared ref=592), data=0
+heap:               new=3337, released=8040, max live=338, gc-cycles=2418
+instructions:       88239
+max memory:         74MB
+loaded code:        classes=74, methods=1077
 
-====================================================== search finished: 12/12/11 10:50 AM
+====================================================== search finished: 12/12/11 5:23 PM

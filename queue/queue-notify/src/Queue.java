@@ -38,6 +38,7 @@ public class Queue {
     private void waitForData(int len) {
 	assert (len <= size);
 	while (c + len > p) {
+	    assert false;
 	    try {
 	        wait();
 	    } catch (InterruptedException e) {
