@@ -1,0 +1,11 @@
+target=DaytimeServer
+
+classpath=.
+sourcepath=.
+
+extensions=${jpf-core}
+
+jpf-net-iocache=.
+listener=
+jpf-net-iocache.native_classpath=.
+jpf-net-iocache.classpath=.
