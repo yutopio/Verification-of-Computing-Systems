@@ -4,7 +4,9 @@ package env.java.io;
 
 /* Stub class for InputStream (hard-coded one-line string). */
 
+import gov.nasa.jpf.jvm.Verify;
 import java.io.IOException;
+import java.lang.Thread;
 
 public class InputStream extends java.io.InputStream {
   int pos;
@@ -15,6 +17,10 @@ public class InputStream extends java.io.InputStream {
   }
 
   public int read() throws IOException {
+    Thread.yield();
+    if (Verify.getBoolean()) {
+      throw new IOException("There was an error reading a byte from stream.");
+    }
     if (pos == hardCodedString.length()) {
       return -1;
     }

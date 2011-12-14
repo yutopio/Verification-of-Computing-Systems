@@ -30,10 +30,16 @@ public class Socket {
   }
 
   public OutputStream getOutputStream() throws IOException {
+    if (Verify.getBoolean()) {
+      throw new IOException("Cannot obtain OutputStream for this Socket.");
+    }
     return new OutputStream();
   }
 
   public InputStream getInputStream() throws IOException {
+    if (Verify.getBoolean()) {
+      throw new IOException("Cannot obtain InputStream for this Socket.");
+    }
     return hardCodedInput;
   }
 }

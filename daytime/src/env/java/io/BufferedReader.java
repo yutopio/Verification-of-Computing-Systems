@@ -7,6 +7,7 @@ package env.java.io;
 import gov.nasa.jpf.jvm.Verify;
 import java.io.IOException;
 import java.io.Reader;
+import java.lang.Thread;
 
 public class BufferedReader {
   java.io.BufferedReader impl;
@@ -16,6 +17,9 @@ public class BufferedReader {
   }
 
   public String readLine() throws IOException {
+    // readLine blocking is undocumented, but the actual implementation
+    // will block if there is no data available in the stream. 
+    Thread.yield();
     if (Verify.getBoolean()) {
       throw new IOException("Simulated exception when reading a line.");
     }

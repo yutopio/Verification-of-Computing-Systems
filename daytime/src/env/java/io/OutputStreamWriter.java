@@ -19,8 +19,8 @@ public class OutputStreamWriter {
   }
 
   public void flush() throws IOException {
-//    if (Verify.getBoolean()) {
-//      throw new IOException("Simulated failure when flushing output.");
-//    }
+    if (Verify.getBoolean()) {
+      throw new IOException("Simulated failure when flushing output.");
+    }
   }
 }

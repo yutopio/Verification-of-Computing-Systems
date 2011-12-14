@@ -4,6 +4,7 @@ package env.java.io;
 
 /* Stub class for OutputStream (just a /dev/null). */
 
+import gov.nasa.jpf.jvm.Verify;
 import java.io.IOException;
 
 public class OutputStream extends java.io.OutputStream {
@@ -11,8 +12,16 @@ public class OutputStream extends java.io.OutputStream {
   }
 
   public void write(int b) throws IOException {
+    if (Verify.getBoolean()) {
+      throw new IOException("There was an error reading a byte from stream.");
+    }
+    // success
   }
 
   public void write(byte[] b) throws IOException {
+    if (Verify.getBoolean()) {
+      throw new IOException("There was an error reading a byte from stream.");
+    }
+    // success
   }
 }

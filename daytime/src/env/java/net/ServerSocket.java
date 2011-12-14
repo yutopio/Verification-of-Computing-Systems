@@ -6,13 +6,21 @@ package env.java.net;
 
 import gov.nasa.jpf.jvm.Verify;
 import java.io.IOException;
+import java.lang.Thread;
 
 public class ServerSocket {
   
   public ServerSocket(int port) throws IOException {
+    if (Verify.getBoolean()) {
+      throw new java.io.IOException("Port bind failure.");
+    }
   }
 
   public Socket accept() throws IOException {
+    Thread.yield();
+    if (Verify.getBoolean()) {
+      throw new java.io.IOException("Some socket error.");
+    }
     return new Socket();
   }
 }
