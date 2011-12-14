@@ -3,12 +3,12 @@
 /* Daytime client.
  * Connects to port 1024, reads and prints one line. */
 
-import java.io.BufferedReader;
+import env.java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import env.java.io.InputStream;
+import env.java.io.InputStreamReader;
+import env.java.net.InetSocketAddress;
+import env.java.net.Socket;
 
 public class DaytimeClient {
   static final int PORT = 1024; //13

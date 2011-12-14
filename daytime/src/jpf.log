@@ -1,0 +1,629 @@
+JavaPathfinder v6.0 (rev 611) - (C) RIACS/NASA Ames Research Center
+
+
+====================================================== system under test
+application: DaytimeServer.java
+
+====================================================== search started: 12/15/11 12:53 AM
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+Connection closed.
+Tue Jan 17 11:31:39 JST 2011
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+java.io.IOException: Simulated exception when writing a line.
+java.io.IOException: Simulated exception when closing connection.
+Connection closed.
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=235, visited=236, backtracked=470, end=0
+search:             maxDepth=78, constraints hit=0
+choice generators:  thread=1 (signal=0, lock=1, shared ref=0), data=235
+heap:               new=4520, released=3815, max live=373, gc-cycles=471
+instructions:       44575
+max memory:         59MB
+loaded code:        classes=83, methods=1193
+
+====================================================== search finished: 12/15/11 12:53 AM
