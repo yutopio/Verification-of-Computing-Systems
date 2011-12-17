@@ -23,4 +23,10 @@ public class ServerSocket {
     }
     return new Socket();
   }
+
+  public void close() throws IOException {
+    if (Verify.getBoolean()) {
+      throw new java.io.IOException("Some socket error.");
+    }
+  }
 }
