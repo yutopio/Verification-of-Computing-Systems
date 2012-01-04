@@ -1,0 +1,13 @@
+echosim=.
+
+site=site.properties
+
+target = EchoSim
+
+echosim.classpath=.
+
+echosim.sourcepath=.
+
+report.console.property_violation=result,error,trace,snapshot
+
+echosim.boot_classpath=env
