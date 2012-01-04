@@ -1,0 +1,15 @@
+alphabet=.
+
+site=site.properties
+
+target = AlphabetServer
+target_args=2
+
+alphabet.classpath=.
+
+alphabet.sourcepath=.
+
+jpf-net-iocache.boot.peer.command=./peer.sh
+jpf-net-iocache.sourcepath=.
+
+report.console.property_violation=result,error,trace,snapshot
