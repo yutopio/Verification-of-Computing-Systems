@@ -33,6 +33,7 @@ public class EchoServer {
             out.write("Echo " + n + ": " + line + "\n");
             out.flush();
           }
+          assert n == 2;
 	  out.close();
           connection.close();
           done = true;

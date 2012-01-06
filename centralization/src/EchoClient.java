@@ -26,9 +26,11 @@ public class EchoClient {
 	    out.write ("Two...\n");
 	    //out.write ("Three...\n");
 	    out.flush();
-	    while ((n++ < 2) && (line = in.readLine()) != null) {
+	    while ((line = in.readLine()) != null) {
 		System.out.println ("Received " + line);
+		n++;
 	    }
+	    assert n == 2;
 	    out.close();
 	} catch (IOException e) {
 	}
