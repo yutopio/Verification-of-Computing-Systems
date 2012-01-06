@@ -1,12 +1,12 @@
 /* $Id: EchoClient.java 713 2009-09-24 06:45:20Z cartho $ */
 
-import java.io.BufferedReader;
+import env.java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import env.java.io.InputStream;
+import env.java.io.InputStreamReader;
+import env.java.io.OutputStreamWriter;
+import env.java.net.InetSocketAddress;
+import env.java.net.Socket;
 
 public class EchoClient {
     public final static void main(String args[]) {

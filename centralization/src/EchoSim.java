@@ -15,10 +15,9 @@ public class EchoSim extends Thread {
 	};
 	t1.start();
 
-	// EXERCISE: add the same code for the echo client
-	t2 = new CentralizedProcess(...) {
+	t2 = new CentralizedProcess(1) {
 	    public void run() {
-		...
+		EchoClient.main(null);
 	    }
 	};
 	t2.start();
