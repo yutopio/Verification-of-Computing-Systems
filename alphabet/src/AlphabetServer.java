@@ -24,6 +24,7 @@ import java.net.Socket;
 public class AlphabetServer {
 
 	static int count = 0;
+	public static Object lock = new Object();
 
 	static class WorkerThread extends Thread {
 
@@ -38,7 +39,9 @@ public class AlphabetServer {
 			OutputStream os = null;
 			int in, out;
 			boolean finished = false;
-			assert (count > 0);
+			synchronized (AlphabetServer.lock) {
+				assert (count > 0);
+			}
 
 			try {
 				is = sock.getInputStream();
@@ -91,8 +94,10 @@ public class AlphabetServer {
 				sock[i] = receiver.accept();
 				System.out.println("[AlphabetServer : main(String[])] accept a connection");
 
-				new WorkerThread(sock[i]).start();
-				count++;
+				synchronized (lock) {
+					new WorkerThread(sock[i]).start();
+					count++;
+				}
 			}
 		} else {
 			System.out.println("[AlphabetServer : main(String[])] starts");
