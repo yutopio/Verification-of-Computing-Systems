@@ -4,16 +4,26 @@ package env.java.io;
 
 /* Stub class for OutputStreamWriter (writing to stdout). */
 
+import centr.rt.CentralizedProcess;
 import java.io.IOException;
 
 public class OutputStreamWriter {
-  static int nLines = 0;
+  static int nLines[] = new int[2];
+
+  static {
+    int i;
+    for (i = 0; i < 2; i++) {
+      nLines[i] = 0;
+    }
+  }
+
 
   public OutputStreamWriter(OutputStream target) {
   }
 
   public void write(String str) throws IOException {
-    nLines++;
+    int pid = ((CentralizedProcess)Thread.currentThread()).pid;
+    nLines[pid]++;
     System.out.print(str);
   }
 
@@ -21,6 +31,8 @@ public class OutputStreamWriter {
   }
 
   public void close() throws IOException {
-    System.out.println(nLines + " lines written.");
+    int pid = ((CentralizedProcess)Thread.currentThread()).pid;
+    System.out.println(nLines[pid] + " lines written.");
+    assert nLines[pid] == 2;
   }
 }
