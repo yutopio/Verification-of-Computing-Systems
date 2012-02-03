@@ -1,0 +1,42 @@
+Only in chatserver-bugfix1/src: CentralizedProcess.class
+Only in chatserver-bugfix1/src: ChatClient.class
+diff -urw chatserver/src/ChatClient.java chatserver-bugfix1/src/ChatClient.java
+--- chatserver/src/ChatClient.java	2009-09-24 16:48:58.000000000 +0900
++++ chatserver-bugfix1/src/ChatClient.java	2011-02-07 20:24:02.332864500 +0900
+@@ -28,16 +28,18 @@
+             InetSocketAddress addr = new InetSocketAddress("localhost", 4444);
+             socket.connect(addr);
+             System.out.println("Client " + id + " connected.");
++
+             InputStreamReader istr =
+                 new InputStreamReader(socket.getInputStream());
+             BufferedReader in = new BufferedReader(istr);
++	    for (int i = 0; i < 1; i++) {
++		System.out.println(id + ": Received " + in.readLine());
++	    }
++
+             OutputStreamWriter out =
+                 new OutputStreamWriter(socket.getOutputStream());
+             out.write(id + ": Hello, world!\n");
+             out.flush();
+-            for (int i = 0; i < 1; i++) {
+-                System.out.println(id + ": Received " + in.readLine());
+-            }
+             out.close();
+         } catch(IOException e) {
+             System.err.println("Client " + id + ": " + e);
+Only in chatserver-bugfix1/src: ChatClient.java.draft
+Only in chatserver-bugfix1/src: ChatClient.java.draft.2
+Only in chatserver-bugfix1/src: ChatServer.class
+Only in chatserver-bugfix1/src: ChatSim$1.class
+Only in chatserver-bugfix1/src: ChatSim$2.class
+Only in chatserver-bugfix1/src: ChatSim.class
+Only in chatserver-bugfix1/src: Worker.class
+Only in chatserver-bugfix1/src/env/java/io: InputStreamReader.class
+Only in chatserver-bugfix1/src/env/java/io: OutputStreamWriter.class
+Only in chatserver-bugfix1/src/env/java/net: InetAddress.class
+Only in chatserver-bugfix1/src/env/java/net: InetSocketAddress.class
+Only in chatserver-bugfix1/src/env/java/net: PortStatus.class
+Only in chatserver-bugfix1/src/env/java/net: ServerSocket.class
+Only in chatserver-bugfix1/src/env/java/net: Socket.class
+Only in chatserver-bugfix1/src/env/java/net: SocketAddress.class
