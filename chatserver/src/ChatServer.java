@@ -58,6 +58,7 @@ public class ChatServer {
                 sock = servsock.accept();
                 int i;
                   synchronized(this) {
+                  synchronized(workers) {
                     for (i = 0; i < workers.length; i++) {
                         if (workers[i] == null) {
                             workers[i] = new Worker(i, sock, this);
@@ -67,6 +68,7 @@ public class ChatServer {
                     } if (i == workers.length) {
                         System.out.println("Can't serve.");
                     }
+                }
                 }
             }
         }
@@ -86,14 +88,18 @@ public class ChatServer {
 
     public synchronized void sendAll(String s) {
         int i;
+        synchronized (workers) {
         for (i = 0; i < workers.length; i++) {
             if (workers[i] != null)
                 workers[i].send(s);
         }
     }
+    }
 
     public void remove(int n) {
+        synchronized (workers) {
         workers[n] = null;
+    }
         sendAll("Client " + n + " quit.");
     }
 }
