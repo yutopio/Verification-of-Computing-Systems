@@ -4,8 +4,8 @@ site=site.properties
 
 target=ChatSim
 
-#listener=gov.nasa.jpf.listener.PreciseRaceDetector
-#cg.threads.break_arrays=true
+listener=gov.nasa.jpf.listener.PreciseRaceDetector
+cg.threads.break_arrays=true
 
 chatsim.classpath=.
 chatsim.sourcepath=.
