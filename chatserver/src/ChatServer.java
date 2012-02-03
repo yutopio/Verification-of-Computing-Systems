@@ -12,18 +12,17 @@ class Worker implements Runnable {
     ChatServer chatServer;
     int n;
 
-    public Worker(int n, Socket s, ChatServer cs) {
+    public Worker(int n, Socket s, ChatServer cs) throws IOException {
         this.n = n;
         chatServer = cs;
         sock = s;
-        out = null;
+        out = new PrintWriter(sock.getOutputStream(), true);
         in = null;
     }
 
     public void run() {
         System.out.println("Thread running: " + Thread.currentThread());
 	try {
-            out = new PrintWriter(sock.getOutputStream(), true);
             assert(out != null);
             in = new BufferedReader(new
                                     InputStreamReader(sock.getInputStream()));
@@ -41,6 +40,7 @@ class Worker implements Runnable {
     }
 
     public void send(String s) {
+        assert(out != null);
         out.println(s);
     }
 }
